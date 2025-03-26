@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// <!---------------------- BOTON DE SCROLL TOP ---------------------------------->
+// BOTON DE SCROLL TOP 
 
 document.addEventListener("DOMContentLoaded", function () {
     const scrollTopBtn = document.getElementById("scrollTopBtn");
@@ -87,3 +87,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+// MENSAJE PRODUCTO GUARDADO EXITOSAMENTE
+
+document.getElementById("productForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Producto guardado exitosamente!");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
