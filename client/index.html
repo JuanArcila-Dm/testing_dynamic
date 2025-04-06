@@ -21,11 +21,10 @@
             </div>
             
             <nav class="navbar bg-primary">
-                <div class="container-fluid ">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white border border-white" type="submit">Buscar</button>
-                    </form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search" />
+                    <button type="submit">BUSCAR</button>
+                </div>
                     <button class="btn-inSesion" id="bt-inSesion">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -410,16 +409,24 @@
                 </a>
             </div>
     </div>
+<!--------------------------------- MAPA DEL PUNTO FISICO ----------------------------------->
+    <div class="titulo-map">    
+        <h2 class="titulo-mapa">📍 Nuestra Ubicación</h2>
+        <p class="descripcion-mapa">Nos encuentras en Bogotá, justo al lado del paradero 😄</p>
+    </div>
     <div class="map-container">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!3m2!1ses!2sco!4v1719179104816!5m2!1ses!2sco!6m8!1m7!1syPGMPG9NaUbNoMvuzkNRqg!2m2!1d4.740374200842526!2d-74.03095130866481!3f48.39138202233117!4f-12.943131979818673!5f0.7820865974627469"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps/embed?pb=!3m2!1ses!2sco!4v1719179104816!5m2!1ses!2sco!6m8!1m7!1syPGMPG9NaUbNoMvuzkNRqg!2m2!1d4.740374200842526!2d-74.03095130866481!3f48.39138202233117!4f-12.943131979818673!5f0.7820865974627469" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
         </iframe>
     </div>
 </template>
 <!------------------------------------- INICIO DE SESION ------------------------------------->
-    <!-- <template id="inicioDeSesion">                                -->
+    <template id="inicioDeSesion">                               
             <div class="fondo">
                 <div class="iniciarSesion">
                     <div class="botones-atras">
@@ -706,224 +713,6 @@
         <div class="carrito-btn">
             <button id= "bt-añadir" class="btn-añadirCarrito">Añadir al carrito</button>
             <button id= "bt-ver" class="btn-verCarrito">Ver carrito</button>
-        </div>
-    </template>
-<!------------------------------------- INICIO DE SESION ------------------------------------->
-        <template id="inicioDeSesion">
-            <div class="fondo">
-                <div class="iniciarSesion">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Inicio sesion</h1>
-                </div>
-                <div class="inicioSesion">
-                    <div class="correo">Correo
-                        <form>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="correo" aria-label="correo" aria-describedby="basic-addon1">
-                            </div>
-                    </div>
-                    <div class="correo">Contraseña
-                            <div class="input-group">
-                                <input type="password" class="form-control" placeholder="contraseña" aria-label="contraseña" aria-describedby="basic-addon1">
-                            </div>
-                        </form>
-                        
-                    </div>
-                    <button class="bt-iniciar">Iniciar sesion</button>
-                    <button class="bt-registrarse">Registrarse</button>
-                    <button class="bt-recuperarC">Olvide mi contraseña</button>
-                </div>
-            </div>    
-        </template>
-<!--------------------------------------- REGISTRARSE ---------------------------------------->
-        <template id="registrarse">
-            <div class="fondo">
-                <div class="registrarse">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Registrarse</h1>
-                </div>
-                <div class="p-registrarse">
-                    <div class="nombre">Nombres y apellidos
-                        <form>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Nombres y apellidos" aria-label="Nombres y apellidos" aria-describedby="basic-addon1">
-                            </div>
-                    </div>
-                    <div class="correo-r">Correo
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
-                            </div>
-                    </div>
-                    <div class="crearC">Cree una contraseña
-                            <div class="input-group">
-                                <input type="password" class="form-control" placeholder="contraseña" aria-label="contraseña" aria-describedby="basic-addon1">
-                            </div>
-                    </div>
-                    <div class="confirmarC">Confirmar contraseña
-                        <div class="input-group">
-                            <input type="password" class="form-control" placeholder="contraseña" aria-label="contraseña" aria-describedby="basic-addon1">
-                        </div>
-                    </form>
-                    </div>
-                    <button class="bt-registrarse">Registrarse</button>
-                </div>
-            </div>
-        </template>
-<!-------------------------------- VERIFICACIÓN DE CORREO #1 --------------------------------->
-        <template id="verificarCorreo1">
-            <div class="fondo">
-                <div class="verificacionC1">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Verificación de la cuenta</h1>
-                </div>
-                <div class="verificacionCorreo">
-                    <b>
-                    <h5>Se envio un codigo al correo para verificación de la cuenta</h5>
-                    </b>
-                    <div class="nombre">Ingrese codigo
-                            <form>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="codigo" aria-label="codigo" aria-describedby="basic-addon1">
-                                </div>
-                            </form>
-                    </div>
-                    <button class="reenviar">Reenviar codigo</button>
-                    <button class="btVerificar">Verificar</button>
-                </div>
-            </div>
-        </template>
-<!-------------------------------- VERIFICACIÓN DE CORREO #2 --------------------------------->
-        <template id="verificarCorreo2">
-            <div class="fondo">
-                <div class="verificacionC2">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <b>
-                    <h1>Verificación de la cuenta</h1>
-                    </b>
-                </div>
-                <div class="verificacionCorreo">
-                    <h3>Verificación exitosa</h3>
-                    <button class="btVerificar">Iniciar sesión</button>
-                </div>
-            </div>
-        </template>
-<!-------------------------------- RECUPERACION DE CONTRASEÑA #1 ----------------------------->
-        <template id="recuperacionContaseña1">
-            <div class="fondo">
-                <div class="rContraseña">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Recuperar contraseña</h1>
-                </div>
-                <div class="recuperarContraseña">
-                <div class="nombre">Correo
-                <form>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                <h6>Se envio un codigo al correo</h6>
-                <div class="nombre">Codigo
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Codigo" aria-label="Codigo" aria-describedby="basic-addon1">
-                    </div>
-                </form>
-                </div>
-                <button class="reenviar">Reenviar codigo</button>
-                <button class="recuperar">Recuperar contraseña</button>
-                </div>
-            </div>
-        </template>
-<!-------------------------------- RECUPERACION DE CONTRASEÑA #2 ----------------------------->
-        <template id="recuperacionContaseña2">
-            <div class="fondo">
-                <div class="rContraseña">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Recuperar contraseña</h1>
-                </div>
-                <div class="recuperarContraseña">
-                <div class="nombre">Ingrese nueva contaseña
-                <form>
-                    <div class="input-group">
-                        <input type="password" class="form-control" placeholder="Nueva contraseña" aria-label="Nueva contraseña" aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                <div class="nombre">Confirmar contraseña
-                    <div class="input-group">
-                        <input type="password" class="form-control" placeholder="Confirmar contraseña" aria-label="Confirmar contraseña" aria-describedby="basic-addon1">
-                    </div>
-                </form>
-                </div>
-                <button class="recuperar">Recuperar contraseña</button>
-                </div>
-            </div>
-        </template>
-<!-------------------------------- RECUPERACION DE CONTRASEÑA #3 ----------------------------->
-        <template id="recuperacionContaseña3">
-            <div class="fondo">
-                <div class="rContraseña">
-                    <button class="btn-regresar">
-                        <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                    </button>
-                    <h1>Recuperar contraseña</h1>
-                </div>
-                <div class="recuperarContraseña">
-                    <button class="recuperar3">Iniciar sesión</button>
-                </div>
-            </div>
-        </template>        
-<!------------------------------------ DESCRIPCIÓN PRODUCTO ---------------------------------->
-        <template id="descripcionProducto">
-            <div class="descripcionPro">
-                <button class="btn-regresar">
-                    <img src="/Proyecto_actualizado-main/view/imagenes/back-icon.png" alt="btn-regresar">
-                </button>
-                <h1>Descripción del producto</h1>
-            </div>
-            <div class="infoP">
-                <div class="imgP">
-                    <img class="img" src="/Proyecto_actualizado-main/productos/10.jpg" alt="imgProducto">
-                </div>
-
-                <div class="contenidoD">
-                    <div class="nombreP">
-                        <h2>Nombre del producto</h2>
-                    </div>
-                    <div class="descripcionP">
-                        <h3>Descripción</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Possimus enim cumque sed tempore commodi harum, voluptas
-                        ipsam officiis magni nostrum suscipit architecto perferendis nesciunt?</p>
-                    </div>
-                    <div class="precio">
-                        <h5>$ 5.000</h5>
-                        <h6>Envio gratis</h6>
-                    </div>
-                </div>
-
-                <div class="puntuacion">
-                    <div class="puntuacionP">
-                        <h5>Valoración</h5>
-                    </div>
-                </div>
-            </div>
-        </template>
-<!------------------------------------- CARRITO DE COMPRAS ----------------------------------->
-    <template id="btnCarrito">
-        <div class="carrito">
-            <button id= "bt-añadir" class="añadirCarrito">Añadir al carrito</button>
-            <button id= "bt-ver" class="verCarrito">Ver carrito</button>
         </div>
     </template>
 <!------------------------------------- BOTON DE SCROLL TOP ---------------------------------->
