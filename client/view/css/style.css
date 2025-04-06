@@ -78,8 +78,8 @@ footer {
 }
 
 .logop {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     justify-content: left;
 }
 
@@ -88,11 +88,38 @@ footer p {
     margin: 0;
 }
 
-.busbar {
+.search-container {
     display: flex;
-    justify-content: flex-end;
-    padding: 0.5em 2.1em;
-    overflow: hidden;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
 }
 
 .navbar {
@@ -123,8 +150,8 @@ footer p {
 }
 
 .btn-inSesion svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .social-media {
@@ -157,9 +184,9 @@ footer p {
 .catalogo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 164px;
+    gap: 80px;
     margin-bottom: 40px;
-    margin: 2%;
+    margin: 4%;
 }
 
 .catalogo a {
@@ -185,10 +212,21 @@ footer p {
 }
 
 .catalogo img {
-    width: 95%;
-    height: auto;
+max-height: 250px;
+max-width: 100%;
+object-fit: contain;
+display: block;
+margin: 0 auto;
+background-color: #fff;
+padding: 5px;
+border-radius: 8px;
+transition: box-shadow 0.3s ease;
 }
 
+
+.catalogo img:hover {
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 .catalogo .description {
     padding: 10px;
     text-align: center;
@@ -285,16 +323,28 @@ footer a:hover {
     color: var(--button-text);
 }
 
-.map-container {
-    text-align: center;
-    margin: 20px 0;
+.titulo-map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 5%;
 }
 
-.map-container iframe {
-    border: 0;
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
+.map-container {
+    display: flex;
+    max-width: 812px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    margin-block-end: 10%;
+}
+
+.map-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .btn-regresar img {
