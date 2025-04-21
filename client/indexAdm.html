@@ -11,7 +11,7 @@
 
 <body>
 <!---------------------------------- PANTALLA PRINCIPAL -------------------------------------->
-<template id="pantallaPrincipal">
+<!-- <template id="pantallaPrincipal"> -->
     <div class="container">
         <header>
             <div class="encabezado">
@@ -19,12 +19,10 @@
                 <h1>Dynamic Paper Solutions</h1>
             </div>
             <nav class="navbar bg-primary">
-                <div class="container-fluid">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white border border-white"
-                            type="submit">Buscar</button>
-                    </form>
+                <div class="search-container">
+                    <input type="text" placeholder="Search" />
+                    <button type="submit">BUSCAR</button>
+                </div>
                     <button class="btn-inSesion" id="bt-inSesion">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -429,7 +427,7 @@
     </div>
 </template>
 <!---------------------------------- AGREGAR / EDITAR PRODUCTO ------------------------------->
-<!-- <template id="agregarEditar">  -->
+<template id="agregarEditar"> 
     <div class="fondo">
         <div class="agregar-editar">
             <button class="btn-regresar">
